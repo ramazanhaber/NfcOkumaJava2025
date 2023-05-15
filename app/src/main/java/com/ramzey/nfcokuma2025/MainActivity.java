@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "NFC OKUNDU!", Toast.LENGTH_SHORT).show();
         txtNfc.setText("EXTRA_ID : "+ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID))); // EXTRA_ID
 
+        txtNfc.setText(txtNfc.getText().toString()+"\nEXTRA_TAG : "+intent.getByteArrayExtra(NfcAdapter.EXTRA_TAG));
+
+
         Parcelable[] rawMessages = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
         NdefMessage[] messages = null;
         if (rawMessages != null) {
