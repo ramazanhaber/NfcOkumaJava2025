@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         txtNfc.setText("EXTRA_ID : "+ByteArrayToHexString(intent.getByteArrayExtra(NfcAdapter.EXTRA_ID))); // EXTRA_ID
 
 
-        txtNfc.setText(txtNfc.getText().toString()+"\nEXTRA_TAG : "+intent.getByteArrayExtra(NfcAdapter.EXTRA_TAG));
+//        txtNfc.setText(txtNfc.getText().toString()+"\nEXTRA_TAG : "+intent.getByteArrayExtra(NfcAdapter.EXTRA_TAG));
 
 
         Parcelable[] rawMessages = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
